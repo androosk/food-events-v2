@@ -10,8 +10,13 @@ module.exports = {
     tickets: './assets/js/tickets.js'
   },
   output: {
+    path: path.join(__dirname + '/dist'),
     filename: '[name].bundle.js',
-    path: __dirname + '/dist',
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, '/')
+    }
   },
   module: {
     rules: [
